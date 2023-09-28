@@ -15,7 +15,17 @@ To run this project is necesary to run the following commands
 3. Start your frontend app
 
    ```
-   npm start
+   npm run build
+   ```
+
+   ```
+   npm run start
+   ```
+
+   or for dev
+
+   ```
+   npm run dev
    ```
 
 ## Backend - Nodejs with Express and Sequelize - SQLite Database
@@ -32,4 +42,10 @@ To run this project is necesary to run the following commands
 
    ```
    npm start
+   ```
+
+   for testing
+
+   ```
+   npm test
    ```
