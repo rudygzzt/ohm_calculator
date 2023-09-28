@@ -24,7 +24,7 @@ To run this project is necesary to run the following commands
 2. Install your dependencies
 
    ```
-   cd backend/ohm_calculator
+   cd backend
    npm install
    ```
 
