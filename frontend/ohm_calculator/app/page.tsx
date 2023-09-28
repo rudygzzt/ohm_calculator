@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Col, Row, Input, Form, Button } from "antd";
+import { Col, Row, Input, Form, Button, Modal, Space } from "antd";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -36,11 +36,15 @@ export default function Home() {
   };
 
   const CalcularOhm = async () => {
-    const ohmValuesApi = await axios.get(api_url + "/bands", {
-      params: { bandsColors },
-    });
-    setOhmValue(ohmValuesApi.data);
-    console.log(ohmValuesApi.data);
+    try {
+      const ohmValuesApi = await axios.get(api_url + "/bands", {
+        params: { bandsColors },
+      });
+      setOhmValue(ohmValuesApi.data);
+      console.log(ohmValuesApi.data);
+    } catch (error) {
+      alert("Text must be a valid Color");
+    }
   };
 
   return (
@@ -84,6 +88,16 @@ export default function Home() {
             {" "}
             Calculates the Ohm value of a resistor based on the band colors
           </p>
+          <br />
+          <p>
+            valid colors <br />[
+            <strong>
+              pink, silver, gold, black, brown, red, orange, yellow, green,
+              blue, violet, gray, white
+            </strong>
+            ]
+          </p>
+          <br />
         </Col>
         <br />
         <br />
@@ -152,7 +166,7 @@ export default function Home() {
       <Row>
         <Col>
           <Button type="default" size="large" onClick={CalcularOhm}>
-            Calcular OhM
+            Calculate OhM
           </Button>
         </Col>
       </Row>
