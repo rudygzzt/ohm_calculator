@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for test assessment",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Rodolfo Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "jest-cli": "^29.7.0",
+    "sequelize": "^6.33.0",
+    "sqlite3": "^5.1.6",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
