@@ -172,7 +172,7 @@ export default function Home() {
       </Row>
       <br />
       <Row>
-        <Col>Valor de OhMs según colores seleccionados:</Col>
+        <Col>Ohm Value:</Col>
       </Row>
       <Row>
         <Col>
